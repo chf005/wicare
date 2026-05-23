@@ -1,0 +1,38 @@
+ 磁碟區 C 中的磁碟是 Acer
+ 磁碟區序號:  4224-80D9
+
+ C:\Users\hongq\Downloads\CSI-front-main\CSI-front-main 的目錄
+
+2026/05/24  上午 01:37    <DIR>          .
+2026/05/15  下午 09:19    <DIR>          ..
+2026/05/15  下午 09:19               445 .env.example
+2026/05/15  下午 09:19               101 .gitignore
+2026/05/15  下午 09:19            24,565 core_bridge.py
+2026/05/20  下午 04:58             8,763 DATABASE_DEMO_GUIDE.md
+2026/05/20  下午 03:55    <DIR>          db
+2026/05/22  下午 10:53             2,919 db_manager.py
+2026/05/15  下午 09:19               311 index.html
+2026/05/15  下午 09:19                76 metadata.json
+2026/05/15  下午 09:41    <DIR>          node_modules
+2026/05/15  下午 09:38           168,669 package-lock.json
+2026/05/15  下午 09:19               992 package.json
+2026/05/15  下午 09:19               201 README.md
+2026/05/20  下午 04:58               266 requirements.txt
+2026/05/22  下午 10:53             1,423 server.py
+2026/05/20  下午 04:58            10,786 server_frontend_backup.py
+2026/05/16  下午 04:15    <DIR>          src
+2026/05/20  下午 04:44                87 start.cmd
+2026/05/24  上午 01:37               164 tmp_dir.txt
+2026/05/24  上午 01:35               253 tmp_git_check.ps1
+2026/05/24  上午 01:37               402 tmp_git_remote_add.txt
+2026/05/24  上午 01:37               946 tmp_lsremote.txt
+2026/05/24  上午 01:34                30 tmp_lsremote_err.txt
+2026/05/15  下午 09:19               508 tsconfig.json
+2026/05/20  下午 04:50             3,090 URL_PATIENT_GUIDE.md
+2026/05/22  下午 10:48               882 vite.config.ts
+2026/05/15  下午 09:19             4,785 WiCare_Architecture.md
+2026/05/15  下午 09:19            27,383 WiFi_Location2.py
+2026/05/15  下午 09:19             4,592 ws_client_example.html
+2026/05/22  下午 10:53    <DIR>          __pycache__
+              25 個檔案         262,639 位元組
+               6 個目錄  52,512,108,544 位元組可用

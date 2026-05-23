@@ -1,0 +1,8 @@
+﻿git : error: remote origin already exists.
+位於 線路:1 字元:72
++ ... ront-main'; git remote add origin https://github.com/hongq/wicare.git ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (error: remote origin already exis 
+   ts.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 

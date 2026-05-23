@@ -1,0 +1,15 @@
+#!/bin/bash
+# requirements.txt - Python 依賴
+
+# Flask REST API
+Flask==2.3.0
+Flask-CORS==4.0.0
+
+# PostgreSQL 數據庫驅動
+psycopg2-binary==2.9.0
+
+# 開發工具（可選）
+python-dotenv==1.0.0
+
+# 如何使用：
+# pip install -r requirements.txt
