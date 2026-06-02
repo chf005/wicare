@@ -1,0 +1,504 @@
+<mxfile host="app.diagrams.net" pages="5">
+  <diagram id="4USBHDxmW19OJMWHuh-C" name="環境圖">
+    <mxGraphModel dx="991" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P0" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=12;" value="0.0&#xa;WI-CARE&#xa;智慧長照跌倒偵測系統&#xa;(整個系統總體)" vertex="1">
+          <mxGeometry height="110" width="160" x="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="E1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="ESP32 感測晶片" vertex="1">
+          <mxGeometry height="50" width="120" x="20" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="系統使用者&#xa;(管理者 / 醫護 / 家屬)" vertex="1">
+          <mxGeometry height="50" width="120" x="20" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="LSTM AI模型" vertex="1">
+          <mxGeometry height="50" width="120" x="650" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="E4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=12;" value="LINE Messaging API" vertex="1">
+          <mxGeometry height="50" width="120" x="650" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="F0_1" edge="1" parent="1" source="E1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;fontSize=12;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;fontStyle=1" target="P0" value="原始 CSI 訊號數據">
+          <mxGeometry relative="1" x="-0.0819" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0_2" edge="1" parent="1" source="E2" style="rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=1;fontSize=12;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="P0" value="生理數據登記 / 參數校正設定 / 認證憑證">
+          <mxGeometry relative="1" x="-0.2267" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0_3" edge="1" parent="1" source="P0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0;exitY=0.5;fontSize=12;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;fontStyle=1" target="E2" value="即時波形 / 房間狀態卡片 / 趨勢健康報表">
+          <mxGeometry relative="1" x="-0.2" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="100" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0_4" edge="1" parent="1" source="P0" style="rounded=1;html=1;exitX=1;exitY=0;entryX=0;entryY=0.5;fontSize=12;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="E3" value="結構化訊號特徵 &amp;amp; Prompt JSON">
+          <mxGeometry relative="1" x="0.1683" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="457" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0_5" edge="1" parent="1" source="E3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=1;entryY=0.5;fontSize=12;labelBackgroundColor=#ffffff;fontStyle=1" target="P0" value="行為語意判判讀結果">
+          <mxGeometry relative="1" x="0.2282" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F0_6" edge="1" parent="1" source="P0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;fontSize=12;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;fontStyle=1" target="E4" value="緊急跌倒推播通知">
+          <mxGeometry relative="1" x="0.491" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="q0h5c1Aph1EpMMQoFkhI" name="Diagram0">
+    <mxGraphModel dx="2661" dy="1228" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="E1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="ESP32 感測晶片" vertex="1">
+          <mxGeometry height="50" width="120" x="-20" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="E2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="系統使用者&#xa;(管理者/醫護/家屬)" vertex="1">
+          <mxGeometry height="50" width="120" x="-20" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="LSTM AI 模型" vertex="1">
+          <mxGeometry height="50" width="120" x="970" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="E4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=14;" value="LINE Messaging API" vertex="1">
+          <mxGeometry height="50" width="120" x="320" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="P1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="1.0&lt;br&gt;數據採集與&lt;br&gt;邊緣前處理" vertex="1">
+          <mxGeometry height="110" width="160" x="-40" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="P2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="2.0&lt;br&gt;後端核心邏輯&lt;br&gt;與 API 服務" vertex="1">
+          <mxGeometry height="110" width="160" x="590" y="355" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---14" edge="1" parent="1" source="P3" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;fontStyle=1" target="V7YXre3MSmVLJQvS4T---4" value="病患與權限管理">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=14;" value="3.0&lt;br&gt;前端監控與&lt;br&gt;管理網頁介面" vertex="1">
+          <mxGeometry height="110" width="160" x="210" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="F1" edge="1" parent="1" source="E1" style="rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontStyle=1" target="P1" value="原始 CSI 訊號">
+          <mxGeometry relative="1" x="0.1333" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="310" y="260" as="sourcePoint" />
+            <mxPoint x="350" y="190" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F2" edge="1" parent="1" source="P1" style="rounded=1;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="P2" value="Movement Score &amp;amp;濾波串流">
+          <mxGeometry relative="1" x="-0.091" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="670" y="235" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F3" edge="1" parent="1" source="P1" style="rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;startArrow=none;endArrow=block;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontStyle=1" target="V7YXre3MSmVLJQvS4T---1" value="CSI 數據暫存">
+          <mxGeometry relative="1" x="0.0256" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="255" y="310" as="sourcePoint" />
+            <mxPoint x="400.0000000000002" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F4" edge="1" parent="1" source="P2" style="rounded=1;html=1;exitX=1;exitY=0;entryX=0.5;entryY=1;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="E3" value="特徵數據 &amp;amp; Prompt">
+          <mxGeometry relative="1" x="-0.0196" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="690.0045197617478" y="277.83402206926917" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F5" edge="1" parent="1" source="E3" style="rounded=1;html=1;exitX=0;exitY=0.5;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="P2" value="判讀結果 (跌倒/常態)">
+          <mxGeometry relative="1" x="-0.2767" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="690.0045197617478" y="277.83402206926917" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F6" edge="1" parent="1" source="P2" style="rounded=1;html=1;entryX=1;entryY=0.5;fontSize=14;labelBackgroundColor=#ffffff;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="E4" value="緊急通知推播">
+          <mxGeometry relative="1" x="0.2155" as="geometry">
+            <mxPoint x="1" as="offset" />
+            <Array as="points">
+              <mxPoint x="613" y="315" />
+            </Array>
+            <mxPoint x="727" y="371" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F7" edge="1" parent="1" source="P2" style="rounded=1;html=1;exitX=0;exitY=1;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="P3" value="即時波形 / 房間狀態 / 趨勢報表">
+          <mxGeometry relative="1" x="-0.3648" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="290" y="449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F8" edge="1" parent="1" source="P3" style="rounded=1;html=1;exitX=0.5;exitY=0;entryX=0;entryY=1;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryDx=0;entryDy=0;fontStyle=1" target="P2" value="生理登記 / 參數微調 / 認證請求">
+          <mxGeometry relative="1" x="-0.378" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="613" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F9" edge="1" parent="1" source="E2" style="rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=1;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="P3" value="操作介面 / 數據登錄">
+          <mxGeometry relative="1" x="-0.1515" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="195" y="560" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F10" edge="1" parent="1" source="P3" style="rounded=1;html=1;exitX=0;exitY=1;entryX=0.458;entryY=0.031;fontSize=14;labelBackgroundColor=#ffffff;exitDx=0;exitDy=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;entryPerimeter=0;fontStyle=1" target="E2" value="儀表板視覺化 / 警報閃爍">
+          <mxGeometry relative="1" x="0.0388" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="130" y="535" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F11" edge="1" parent="1" source="P2" style="rounded=1;html=1;exitX=1;exitY=1;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;startArrow=block;endArrow=none;exitDx=0;exitDy=0;entryDx=0;entryDy=0;endFill=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="V7YXre3MSmVLJQvS4T---6" value="裝置認證">
+          <mxGeometry relative="1" x="0.5317" y="3" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="917" y="449" />
+            </Array>
+            <mxPoint x="760.0000000000002" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F12" edge="1" parent="1" source="P2" style="rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;startArrow=none;endArrow=block;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontStyle=1;startFill=0;" target="V7YXre3MSmVLJQvS4T---3" value="生理/日常檢查">
+          <mxGeometry relative="1" x="0.3976" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="540" y="420" as="sourcePoint" />
+            <mxPoint x="590.0000000000002" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="F13" edge="1" parent="1" source="P2" style="rounded=1;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;fontSize=14;labelBackgroundColor=#ffffff;endArrow=block;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontStyle=1;edgeStyle=orthogonalEdgeStyle;" target="V7YXre3MSmVLJQvS4T---2" value="寫入跌倒事件">
+          <mxGeometry relative="1" x="0.4275" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="590.0000000000002" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---11" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---1" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;fontStyle=1" target="P2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNwbDIfNtmGO02paktMX-1" connectable="0" parent="V7YXre3MSmVLJQvS4T---11" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="讀取波形" vertex="1">
+          <mxGeometry relative="1" x="-0.0061" as="geometry">
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---1" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="CSI 數據即時暫存" vertex="1">
+          <mxGeometry height="45" width="180" x="-50" y="387.5" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---13" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---2" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontStyle=1;edgeStyle=orthogonalEdgeStyle;" target="P3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="560" as="sourcePoint" />
+            <mxPoint x="350.0658590267241" y="715.468527703902" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---2" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="跌倒事件" vertex="1">
+          <mxGeometry height="45" width="180" x="940" y="802.5" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---15" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;edgeStyle=orthogonalEdgeStyle;curved=0;fontStyle=1" target="P3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNwbDIfNtmGO02paktMX-5" connectable="0" parent="V7YXre3MSmVLJQvS4T---15" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="歷史健康紀錄" vertex="1">
+          <mxGeometry relative="1" x="-0.003" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---3" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="受護者健康紀錄" vertex="1">
+          <mxGeometry height="45" width="180" x="580" y="672.5" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---4" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="受護者基本資料" vertex="1">
+          <mxGeometry height="45" width="180" x="70" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="使用者帳號" vertex="1">
+          <mxGeometry height="45" width="180" x="710" y="540" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---10" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---6" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;startArrow=classicThin;startFill=1;endArrow=none;endFill=0;fontStyle=1" target="P3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tNwbDIfNtmGO02paktMX-7" connectable="0" parent="V7YXre3MSmVLJQvS4T---10" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="裝置管理與配置" vertex="1">
+          <mxGeometry relative="1" x="0.0171" y="1" as="geometry">
+            <mxPoint x="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;fontSize=14;" value="偵測裝置" vertex="1">
+          <mxGeometry height="45" width="180" x="827" y="717.5" as="geometry" />
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---8" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---5" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.721;entryY=0.997;entryDx=0;entryDy=0;fontSize=14;startSize=8;endSize=8;entryPerimeter=0;fontStyle=1" target="P2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="953.4314575050757" y="470.0008729652603" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tNwbDIfNtmGO02paktMX-8" connectable="0" parent="V7YXre3MSmVLJQvS4T---8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="使用者驗證" vertex="1">
+          <mxGeometry relative="1" x="0.0006" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="V7YXre3MSmVLJQvS4T---12" edge="1" parent="1" source="V7YXre3MSmVLJQvS4T---1" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;fontSize=14;startSize=8;endSize=8;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1;curved=0;" target="P3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="705" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tNwbDIfNtmGO02paktMX-2" connectable="0" parent="V7YXre3MSmVLJQvS4T---12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="讀取波形" vertex="1">
+          <mxGeometry relative="1" x="-0.2994" y="3" as="geometry">
+            <mxPoint x="-3" y="-22" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="xth6X_lZssDE0hSWzeIL" name="Diagram1">
+    <mxGraphModel dx="1310" dy="877" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="croQB2CyMwOd85a2VPI2-1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;" value="ESP32 感測晶片" vertex="1">
+          <mxGeometry height="50" width="120" x="190" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0" value="1.1&lt;br&gt;CSI 原始數據&lt;br&gt;偵聽與收集" vertex="1">
+          <mxGeometry height="80" width="140" x="180" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0" value="1.2&lt;br&gt;Hampel 濾波與&lt;br&gt;離群值剔除處理" vertex="1">
+          <mxGeometry height="80" width="140" x="440" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0" value="1.3&lt;br&gt;活動特徵提取與&lt;br&gt;移動分數計算" vertex="1">
+          <mxGeometry height="80" width="140" x="710" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-6" edge="1" parent="1" source="croQB2CyMwOd85a2VPI2-1" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=0" target="croQB2CyMwOd85a2VPI2-2" value="原始 RF 載波訊號">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-7" edge="1" parent="1" source="croQB2CyMwOd85a2VPI2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" target="croQB2CyMwOd85a2VPI2-3" value="CSI 原始矩陣封包">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="340" y="760" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-8" edge="1" parent="1" source="croQB2CyMwOd85a2VPI2-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=0" target="croQB2CyMwOd85a2VPI2-4" value="去離群值訊號流">
+          <mxGeometry relative="1" x="-0.0769" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="croQB2CyMwOd85a2VPI2-9" edge="1" parent="1" source="croQB2CyMwOd85a2VPI2-4" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontStyle=0" target="L_qriOQvCgjcmfxMVsz5-1" value="輸出純淨波形數據">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="780" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="L_qriOQvCgjcmfxMVsz5-1" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=0;align=center;strokeWidth=2;fontSize=14;" value="CSI 數據即時暫存" vertex="1">
+          <mxGeometry height="45" width="180" x="690" y="142.5" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="5B5kx9rPCpeQtd7imB7Y" name="Diagram2">
+    <mxGraphModel dx="1973" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="B1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontSize=10;dashed=1;fontStyle=1" value="&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;【外部程序邊界】&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;從 1.0 邊緣端傳入&lt;br&gt;(Movement Score)" vertex="1">
+          <mxGeometry height="60" width="140" x="-120" y="367.5" as="geometry" />
+        </mxCell>
+        <mxCell id="B2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;fontSize=10;dashed=1;fontStyle=1" value="&lt;div&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;【外部程序邊界】&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;/div&gt;與 3.0 前端網頁交互&lt;br&gt;(前端 API 請求/回應)" vertex="1">
+          <mxGeometry height="60" width="140" x="-120" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="E3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;" value="LSTM ＡI 模型" vertex="1">
+          <mxGeometry height="50" width="120" x="500" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="E4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=11;" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;LINE Messaging API&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="500" y="435" as="geometry" />
+        </mxCell>
+        <mxCell id="P21" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="2.1&#xa;帳號認證與&#xa;權限檢查機制" vertex="1">
+          <mxGeometry height="75" width="100" x="40" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="P22" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="2.2&#xa;訊號串流與&#xa;生理數據處理" vertex="1">
+          <mxGeometry height="75" width="100" x="140" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-7" edge="1" parent="1" source="P23" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontStyle=1" target="-btnIuf4hXF8isxLc2kx-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-11" connectable="0" parent="-btnIuf4hXF8isxLc2kx-7" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;讀取波形快照&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5311" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P23" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="2.3&#xa;雲端 AI 智慧&#xa;行為判讀控制" vertex="1">
+          <mxGeometry height="75" width="100" x="300" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="P24" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=11;" value="2.4&#xa;緊急警報觸發&#xa;與推播調度" vertex="1">
+          <mxGeometry height="75" width="100" x="300" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="D1" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=center;spacingLeft=6;fontStyle=1" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;使用者帳號&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="160" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="D2" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=center;spacingLeft=6;fontStyle=1" value="受護者健康紀錄" vertex="1">
+          <mxGeometry height="50" width="120" x="130" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="D3" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=left;spacingLeft=6;fontStyle=1" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;跌倒事件&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="500" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="FL2_1" edge="1" parent="1" source="B2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=0;entryX=0;entryY=0.5;fontSize=10;exitDx=0;exitDy=0;fontStyle=1" target="P21" value="認證請求">
+          <mxGeometry relative="1" x="0.0586" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_2" edge="1" parent="1" source="P21" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=1;fontSize=9;startArrow=block;endArrow=block;exitDx=0;exitDy=0;fontStyle=1" target="D1" value="驗證帳密/比對權限">
+          <mxGeometry relative="1" x="0.4367" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_3" edge="1" parent="1" source="B2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0.5;entryY=0;fontSize=10;entryDx=0;entryDy=0;exitDx=0;exitDy=0;fontStyle=1" target="P22" value="生理登記 / 參數調整">
+          <mxGeometry relative="1" x="-0.0476" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_4" edge="1" parent="1" source="B1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;entryX=0;entryY=0.5;fontSize=10;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fontStyle=1" target="P22" value="Movement串流數據">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="30" y="390" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_5" edge="1" parent="1" source="P22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=9;endArrow=block;fontStyle=1" target="D2" value="寫入生理數據">
+          <mxGeometry relative="1" x="-0.2308" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_6" edge="1" parent="1" source="P22" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;fontSize=10;exitDx=0;exitDy=0;fontStyle=1" target="P23" value="高活動量超標觸發">
+          <mxGeometry relative="1" x="0.0002" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_7" edge="1" parent="1" source="P23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=1;exitY=0;fontSize=10;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1" target="E3" value="特徵數據與 Prompt">
+          <mxGeometry relative="1" x="0.1761" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="385" y="175" />
+            </Array>
+            <mxPoint x="520" y="231" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_8" edge="1" parent="1" source="E3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=1;entryY=0.5;fontSize=10;exitDx=0;exitDy=0;entryDx=0;entryDy=0;fontStyle=1" target="P23" value="判讀結果">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FL2_9" edge="1" parent="1" source="P23" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;fontSize=10;fontStyle=1" target="P24" value="確認跌倒事件">
+          <mxGeometry relative="1" x="-0.4667" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="350" y="300" />
+              <mxPoint x="350" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FL2_11" edge="1" parent="1" source="P24" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;exitX=0.5;exitY=1;entryX=0;entryY=0.5;fontSize=10;exitDx=0;exitDy=0;fontStyle=1" target="E4" value="呼叫 LINE API 與 Token">
+          <mxGeometry relative="1" x="0.1688" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;entryX=0;entryY=0.5;fontSize=10;entryDx=0;entryDy=0;curved=0;fontStyle=1" target="D3" value="">
+          <mxGeometry relative="1" x="0.0667" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="350" y="315" />
+            </Array>
+            <mxPoint x="350" y="280" as="sourcePoint" />
+            <mxPoint x="590" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-6" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=center;spacingLeft=6;fontStyle=1" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;CSI數據即時暫存&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="290" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-9" edge="1" parent="1" source="-btnIuf4hXF8isxLc2kx-8" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontStyle=1" target="P21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-10" connectable="0" parent="-btnIuf4hXF8isxLc2kx-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=12;fontStyle=1" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;核對裝置名單&lt;/font&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0071" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-btnIuf4hXF8isxLc2kx-8" parent="1" style="shape=partialRectangle;right=0;left=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;align=center;spacingLeft=6;fontStyle=1" value="&lt;span style=&quot;font-size: 11px;&quot;&gt;偵測裝置&lt;/span&gt;" vertex="1">
+          <mxGeometry height="50" width="120" x="30" y="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="JqqkphZsaBZ36aG1ZZ8S" name="Diagram3">
+    <mxGraphModel dx="915" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-1" parent="1" style="whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;align=center;strokeWidth=2;" value="系統使用者&lt;br&gt;(管理員/醫護/家屬)" vertex="1">
+          <mxGeometry height="75" width="140" x="710" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;strokeWidth=2;" value="&lt;span&gt;3.1&lt;/span&gt;&lt;br&gt;WebSocket 即時訊號&lt;br&gt;波形圖表渲染程序" vertex="1">
+          <mxGeometry height="85" width="160" x="470" y="534" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;strokeWidth=2;" value="&lt;span&gt;3.2&lt;/span&gt;&lt;br&gt;生理狀態紀錄&lt;br&gt;與健康統計報表生成" vertex="1">
+          <mxGeometry height="85" width="160" x="470" y="689" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;align=center;strokeWidth=2;" value="&lt;span&gt;3.3&lt;/span&gt;&lt;br&gt;系統環境參數&lt;br&gt;動態校正與配置介面" vertex="1">
+          <mxGeometry height="85" width="160" x="470" y="929" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-5" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="CSI 數據即時暫存" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="554" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-6" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="跌倒事件" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-7" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="受護者健康紀錄" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-8" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="受護者基本資料" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-9" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="使用者帳號" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-10" parent="1" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;align=center;strokeWidth=2;" value="偵測裝置" vertex="1">
+          <mxGeometry height="45" width="180" x="80" y="949" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-11" parent="1" style="whiteSpace=wrap;html=1;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;strokeWidth=1;dashed=1;fontSize=11;align=center;fontStyle=1" value="&lt;span style=&quot;font-size: 12px;&quot;&gt;【外部程序邊界】&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;2.0 雲端核心邏輯&lt;/span&gt;&lt;br style=&quot;font-size: 12px;&quot;&gt;&lt;span style=&quot;font-size: 12px;&quot;&gt;與 API 服務&lt;/span&gt;" vertex="1">
+          <mxGeometry height="55" width="140" x="720" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-12" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-1" value="即時動態視覺化圖表">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-13" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-2" value="讀取即時波形">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-14" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-1" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.5;entryY=1;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.25;exitDx=0;exitDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-3" value="請求歷史數據/更新生理數據">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-15" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-3" value="跌倒事件">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-16" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-7" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-3" value="健康紀錄">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-17" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.25;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-1" value="趨勢健康分析報表">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-18" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-1" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=0.75;exitDx=0;exitDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-4" value="修改/配置指令">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-19" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-4" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-8" value="更新病患個資">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="493" y="893" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-20" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-4" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-9" value="更新使用者設定">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-21" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-4" style="rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-10" value="綁定與校正裝置">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="R1MQQGvTltiogQ2wBLVz-22" edge="1" parent="1" source="R1MQQGvTltiogQ2wBLVz-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontSize=10;html=1;strokeWidth=1.5;strokeColor=#4D4D4D;endArrow=block;endSize=6;labelBackgroundColor=#ffffff;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="R1MQQGvTltiogQ2wBLVz-11" value="通知核心重新驗證">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
